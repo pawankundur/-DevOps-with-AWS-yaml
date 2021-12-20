@@ -3,6 +3,6 @@
   become: yes
   tasks: 
   - name: i want to install webserver
-  apt:
-    name: apache2 
-    status: prsesnt 
+    apt:
+     name: apache2 
+     status: prsesnt 
