@@ -1,8 +1,8 @@
 ---
 - hosts: all 
-- become: yes
-- tasks: 
-  name: i want to install webserver
+  become: yes
+  tasks: 
+  - name: i want to install webserver
   apt:
-   name: apache2 
-   status: prsesnt 
+    name: apache2 
+    status: prsesnt 
