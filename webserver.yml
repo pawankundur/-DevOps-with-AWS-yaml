@@ -10,7 +10,7 @@
   - name: install tree 
     apt: 
      name: tree 
-     state: present 
+     state: absent 
 
   - name: I want to start webserver 
     service: 
