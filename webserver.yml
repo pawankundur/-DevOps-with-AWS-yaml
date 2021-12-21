@@ -9,10 +9,6 @@
      state: present 
     when: ansible_os_family =="Debian"
 
-  - name: install tree 
-    apt: 
-     name: tree 
-     state: present 
 
   - name: I want to start webserver 
     service: 
