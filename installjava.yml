@@ -1,0 +1,15 @@
+--- 
+- hosts: all 
+  become: yes
+  tasks:
+  - name:  I want to install java on Ubuntu nodes
+    apt:
+     name: "{{javaonubuntu}}"
+     state: present
+    where: ansible_os_family =="Debian"
+
+  - name: I want to install java on RedHat nodes
+    yum:
+     name: "{{javaonredhat}}"
+     state: present
+    whare: ansible_os_family =="RedHat" 
