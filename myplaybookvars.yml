@@ -1,0 +1,13 @@
+--- 
+- host: 172.31.20.61 
+  become: yes
+  vars:
+   myvar1: git 
+   myvar2: tree 
+  tasks:
+  - name: Install tree
+    apt:
+     name: "{{myvar2}}"
+  - name: I want to display myvar2 
+    debug: 
+     msg: "{{myvar2}}"
