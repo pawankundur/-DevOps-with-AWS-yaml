@@ -1,9 +1,9 @@
 ---
-- hosts: all 
+- hosts: mywebservers 
   become: yes
   gather_facts: yes
   tasks: 
-  - name: i want to install webserver only on Ubuntu server
+  - name: I want to install webserver only on Ubuntu server
     apt:
      name: "{{ubuntupackage}}"
      state: present 
