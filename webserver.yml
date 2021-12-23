@@ -3,15 +3,15 @@
   become: yes
   gather_facts: yes
   tasks: 
-  - name: i want to install webserver
+  - name: i want to install webserver only on Ubuntu server
     apt:
-     name: apache2 
+     name: "{{ubuntupackage}}"
      state: present 
     when: ansible_os_family =="Debian"
 
 
-  - name: I want to start webserver 
-    service: 
-     name: apache2 
-     state: started 
-    when: ansible_os_family =="Debian"
+  - name: I want to start webserver only on RedHat Server
+    yum: 
+     name: "{{redhatpackage}}"
+     state: present
+    when: ansible_os_family =="RedHat"

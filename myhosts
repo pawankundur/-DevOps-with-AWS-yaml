@@ -1,2 +1,19 @@
+[mywebservers]
 172.31.20.61
 172.31.43.214
+
+[myapplicationservers]
+172.31.20.6
+172.31.43.21
+
+[mydbservers]
+172.31.20.60
+172.31.43.2
+
+[mytestservers]
+172.31.20.1
+172.31.43.1
+
+[mywebservers:vars]
+ubuntupackage = apache2
+redhatpackage = httpd
