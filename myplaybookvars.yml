@@ -1,5 +1,5 @@
 --- 
-- host: 172.31.20.61 
+- hosts: 172.31.20.61 
   become: yes
   vars:
    myvar1: git 
