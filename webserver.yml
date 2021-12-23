@@ -13,7 +13,7 @@
     service:
      name: "{{ubuntupackage}}"
      state: started
-    when: ansible_os_family =="Debian""
+    when: ansible_os_family == "Debian"
 
   - name: I want to start webserver only on RedHat Server
     yum: 
