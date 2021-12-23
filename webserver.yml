@@ -9,9 +9,20 @@
      state: present 
     when: ansible_os_family =="Debian"
 
+  - name: I want to start webserver only on Ubuntu server
+    service:
+     name: "{{ubuntupackage}}"
+     state: started
+    when: ansible_os_family == "Debian""
 
   - name: I want to start webserver only on RedHat Server
     yum: 
      name: "{{redhatpackage}}"
      state: present
+    when: ansible_os_family =="RedHat"
+
+  - name: I want to start webserver only on RedHat server
+    service:
+     name: "{{redhatpackage}}"
+     state: started
     when: ansible_os_family =="RedHat"
