@@ -1,0 +1,11 @@
+--- 
+- hosts:
+  become: yes
+  tasks: 
+  - name: I want to execute Linux command directely by playbook
+    command: hostname -f 
+
+  - name: I want to display my first task result 
+    debug: 
+    msg: "{{hostname -f}}" 
+  
