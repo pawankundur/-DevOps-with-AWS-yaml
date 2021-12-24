@@ -1,5 +1,5 @@
 --- 
-- hosts:
+- hosts: 172.31.20.61
   become: yes
   tasks: 
   - name: I want to execute Linux command directely by playbook
