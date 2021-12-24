@@ -8,5 +8,5 @@
 
   - name: I want to display my first task result 
     debug: 
-    msg: "{{myresult}}" 
+     msg: "{{hostname -f}}" 
   
