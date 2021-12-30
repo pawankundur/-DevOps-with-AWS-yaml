@@ -7,9 +7,17 @@
     apt:
      name: apache2
      state: present
+     
   - name: I want to copy myindex file into ansible node side 
     template: 
      src: myindex.j2
      dest: /var/www/html/index.html 
+
+  - name: I want to dowmload remote (internet) files
+    get_url: 
+     url: https://get.jenkins.io/war-stable/2.319.1/jenkins.war
+     dest: /home/ubuntu/jenkins.war
+     force_basic_auth: yes
+
 
   
