@@ -7,8 +7,8 @@
 
 - name: Create the directory to  install Tomcat to the /opt/tomcat directory 
   file: 
-  path: /opt/tomcat
-  state: directory 
+   path: /opt/tomcat
+   state: directory 
 
 - name: extract tar file into /opt/tomcat 
   command: 
